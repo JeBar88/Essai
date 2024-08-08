@@ -16,7 +16,13 @@ Des éléments des rapport `Incendie_JBarde.pdf` et `LectureDirigee_JBarde.pdf` 
 ## Conférence
 Ce dossier contient les slides des différentes conférences réalisées.
 - `Incendie_JBarde_slides.pdf` : "Analyse actuarielle du péril incendie" présenté à
-  - test
+  - Centre Interdisciplinaire de Modélisation Mathématique de l’Université Laval
+(CIMMUL)
+  - Chaire Industrielles de Recherche sur la Construction Écoresponsable du Bois (CIRCERB)
+  - Chaire de Recherche Co-operators en analyse des risques actuariels (CARA)
+- `LectureDirigee_JBarde_slides.pdf` : "Incendie et Pareto" présenté à
+  -  Centre Interdisciplinaire de Modélisation Mathématique de l’Université Laval (CIMMUL)
+  
  
 ## Code
 Ce dossier contient tout le code développé pour mon essai.

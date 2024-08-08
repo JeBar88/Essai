@@ -22,6 +22,8 @@ Ce dossier contient les slides des différentes conférences réalisées.
   - Chaire de Recherche Co-operators en analyse des risques actuariels (CARA)
 - `LectureDirigee_JBarde_slides.pdf` : "Incendie et Pareto" présenté à
   -  Centre Interdisciplinaire de Modélisation Mathématique de l’Université Laval (CIMMUL)
+- `Essai_JBarde_slides.pdf` : "Actuarial Perspectives on Fire Losses, Particularly for Heavy Timber Construction" présenté à
+  - Actuarial Research Conference (ARC 2024)
   
  
 ## Code

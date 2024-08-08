@@ -9,7 +9,7 @@ Cet essai vise à comprendre et à quantifier le risque d'incendie, en se concen
 Ce dossier contient les différents rapports rédigés au cours de ma maîtrise.
 - `Incendie_JBarde.pdf` : rapport rédigé à la suite de la bourse reçue du CIMMUL pour le poste d'auxiliaire de recherche de premier cycle.
 - `LectureDirigee_JBarde.pdf` : rapport rédigé dans le cadre du cours de lecture dirigée ACT-7014.
-- `LectureDirigee_JBarde.pdf` : essai rédigé après deux ans de maîtrise.
+- `EssaiDirigee_JBarde.pdf` : essai rédigé après deux ans de maîtrise.
 
 Des éléments des rapport `Incendie_JBarde.pdf` et `LectureDirigee_JBarde.pdf` on été réutilisser dans la rédaction de l'essai.
 

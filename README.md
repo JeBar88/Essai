@@ -10,5 +10,8 @@ Ce doissier contient la base de données des périls d'incendie de la ville de T
 ### Articles
 Ce dossier regroupe l'ensemble des articles consultés au cours de ma maîtrise pour la rédaction de mon essai.
 
-### POT_Exemple
+### Code
+Ce dossier contient tout le code développé pour mon essai.
+
+#### POT_Exemple
 Ce dossier contient le fichier RMarkdown illustrant la méthode *Peak-over-Threshold* (POT). Les bases de données nécessaires se trouvent dans le dossier Data.

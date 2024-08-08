@@ -13,6 +13,5 @@ Ce dossier regroupe l'ensemble des articles consultés au cours de ma maîtrise 
 ### Code
 Ce dossier contient tout le code développé pour mon essai.
 
-##### test
-- POT_Exemple :
+##### **POT_Exemple**
 Ce dossier contient le fichier RMarkdown illustrant la méthode *Peak-over-Threshold* (POT). Les bases de données nécessaires se trouvent dans le dossier Data.

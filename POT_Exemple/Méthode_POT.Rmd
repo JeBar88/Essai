@@ -20,10 +20,10 @@ library(fitdistrplus)
 
 
 ```{r, echo=FALSE, eval=TRUE}
-ms <- read.csv2("data/Datat_POT.csv")$Total
+ms <- read.csv2("Data_POT.csv")$Total
 ```
 
-# Exemple fait par Étienne Marceau
+# Adaptation de l'exemple fait par Étienne Marceau sur excel
 
 ## Fonction de répartition empirique
 

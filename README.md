@@ -22,3 +22,5 @@ Ce dossier contient tous les codes relatifs à la modélisation du péril incend
 - Documentation.R : contiens la documentation des fonctions qui se trouve dans le fichier Fonction.R.
 - Toronto.R : contient le code pour la modélisation du péril incendie pour la base de données de la ville de Toronto, qui représente une portion importante de l'essai.
 - NFID.R : contient le code pour la modélisation du péril incendie pour la NFID, qui représente une portion importante de l'essai.
+- MixedErlang.R : contient le code qui teste la loi de mélange d'Erlang pour la portion sous le seuil.
+Les autres fichiers sont similaires aux fichiers `Toronto.R` et `NFID.R`, mais utilisent d'autres bases de données.

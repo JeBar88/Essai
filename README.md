@@ -13,6 +13,11 @@ Ce dossier contient les différents rapports rédigés au cours de ma maîtrise.
 
 Des éléments des rapport `Incendie_JBarde.pdf` et `LectureDirigee_JBarde.pdf` on été réutilisser dans la rédaction de l'essai.
 
+## Conférence
+Ce dossier contient les slides des différentes conférences réalisées.
+- `Incendie_JBarde_slides.pdf` : "Analyse actuarielle du péril incendie" présenté à
+  - test
+ 
 ## Code
 Ce dossier contient tout le code développé pour mon essai.
 

@@ -25,3 +25,9 @@ Ce dossier contient tous les codes relatifs à la modélisation du péril incend
 - `MixedErlang.R` : contient le code qui teste la loi de mélange d'Erlang pour la portion sous le seuil.
 
 Les autres fichiers de ce dossier sont similaires aux fichiers `Toronto.R` et `NFID.R`, mais utilisent d'autres bases de données.
+
+#### RiskSharing
+Ce dossier contient le code nécessaire pour la section sur le partage de risque de l'essai.
+- `RiskSharing_LN.R` : contient le code pour le partage de risque en utilisant la loi LN-PaG, tel que utilisé dans l'essai.
+- `RiskSharing_GB2.R` : contiens le code pour le partage de risque en utilisant la loi GB2-PaG.
+

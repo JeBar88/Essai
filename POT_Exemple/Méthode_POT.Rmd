@@ -1,0 +1,194 @@
+---
+title: "Exemple méthode POT"
+author: "Jérémie Barde"
+date: '2022-05-05'
+output: pdf_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(actuar)
+library(formatR)
+library(ggplot2)
+library(gridExtra)
+library(knitr)
+library(evir)
+library(qrmtools)
+library(ReIns)
+library(fitdistrplus)
+```
+
+
+```{r, echo=FALSE, eval=TRUE}
+ms <- read.csv2("data/Datat_POT.csv")$Total
+```
+
+# Exemple fait par Étienne Marceau
+
+## Fonction de répartition empirique
+
+```{r}
+Fn <- ecdf(ms)
+plot(Fn)
+```
+
+## Fonction d'exces moyen
+```{r}
+MeanExcess(ms)
+```
+
+## Maximum de vraisemblance (Pareto)
+```{r}
+logvrais <- function(par){
+  -sum(log(actuar::dpareto(ms, par[1], par[2])))
+}
+par <- constrOptim(c(1.5, 1000), logvrais, grad = NULL, ui = diag(2), ci = c(0, 0))
+a <- par$par[1]
+lam <- par$par[2]
+model <- cbind(a, lam)
+```
+On trouve les paramêtres suivants :
+```{r, eval=T, echo=FALSE}
+knitr::kable(round(model,2), "pipe", col.names = c("$\\alpha$", "$\\lambda$"), escape = T)
+```
+
+### Comapraison courbe emprique avec Pareto
+```{r}
+plot(Fn)
+curve(actuar::ppareto(x, a, lam), add=T, col = "blue")
+
+plot(Fn, ylim=c(0.98, 1.005), xlim=c(0, 25000))
+curve(actuar::ppareto(x, a, lam), add=T, col = "blue")
+```
+
+## Maximum de vraisemblance données élevées
+```{r}
+logvrais2 <- function(par){
+  u <- 4000
+  -sum(log(actuar::dpareto(ms, par[1], par[2])/actuar::ppareto(u, par[1], par[2], low=F)) * I(ms >= u))
+}
+
+par2 <- constrOptim(c(2, 0.0001), logvrais2, grad = NULL, ui = diag(2), ci = c(0, 0))
+a2 <- par2$par[1]
+lam2 <- par2$par[2]
+model2 <- cbind(a2, lam2);model2
+```
+
+### Comapraison avec valeur élevée
+```{r}
+plot(Fn, ylim=c(0.98, 1.002), xlim=c(0, 25000))
+curve(actuar::ppareto(x, a2, lam2), add=T, col = "blue")
+```
+
+
+## Méthode POT
+```{r}
+logvraisPOT <- function(par){
+  u <- 4000
+  -sum(log(1/par[2] * (1 + par[1]/par[2] * pmax(ms - u,0))^(-1/par[1] - 1)) * I(ms >= u))
+}
+par3 <- constrOptim(c(1, 1000), logvraisPOT, grad = NULL, ui =diag(2), ci = c(0, 0))
+zeta <- par3$par[1]
+sigma <- par3$par[2]
+model3 <- cbind(zeta, sigma);model3
+
+# Autre façon
+# logvraisPOT2 <- function(par){
+# u <- 4000
+#  -sum(ifelse(ms >= 4000, log(dgpd(ms, par[1], u, par[2])), 0))
+#}
+
+#constrOptim(c(1, 1000), logvraisPOT2, grad = NULL, ui =diag(2), ci = c(0, 0))
+```
+
+On trouve les paramêtres suivants :
+```{r, eval=T, echo=FALSE}
+knitr::kable(round(model3,2), "pipe", col.names = c("$\\gamma$", "$\\sigma$"), escape = T)
+```
+
+### Graphique
+```{r}
+u <- 4000
+Fx.PG <- Fn(u) + (1-Fn(u)) * (1 - (1/(1 + (ms[ms >= u] - u) * zeta/sigma))^(1/zeta))
+               
+plot(Fn, ylim=c(0.98, 1.002), xlim=c(0, 25000), lwd = 2)
+matplot(ms[ms >= u], Fx.PG, pch = 16, add = T, col = "blue")
+
+```
+
+
+# Swedish fire data
+
+## Vraisemblance avec loi Pareto
+```{r}
+
+fire <- as.numeric(read.table("Data Fire Swedish 1982.txt")$V1)
+Fm <- ecdf(fire)
+
+MeanExcess(fire)
+
+quantile(fire, 0.90)
+
+fire[fire > 1]
+
+
+logvrais <- function(par){
+  -sum(log(actuar::dpareto(fire, par[1], par[2])))
+}
+
+param <- constrOptim(c(5, 10), logvrais, grad = NULL, ui=diag(2), ci = c(0, 0))  
+alpha <- param$par[1]
+lambda <- param$par[2]
+
+```
+
+
+### Graphique
+```{r}
+plot(Fm, ylim=c(0.90, 1.002), xlim=c(0, 45))
+curve(actuar::ppareto(x, alpha, lambda), add = T, col="blue", lwd = 2)
+```
+
+
+## Méthode POT
+```{r}
+
+u <- 1.268
+logvraisPOT <- function(par){
+  -sum(ifelse(fire >= u, log(dgpd(fire, par[1], u, par[2])), 0))
+}
+param <- constrOptim(c(2, 3), logvraisPOT, grad = NULL, ui=diag(2), ci = c(0, 0))
+zeta <- param$par[1]
+sigma <- param$par[2]
+model <- cbind(zeta, sigma);model
+```
+### Analyse automatique
+
+
+
+### Graphique (fit)
+
+```{r}
+
+Fx.PG <- Fm(u) + (1-Fm(u)) * pgpd(fire[fire >= u], zeta, u, sigma)
+               
+plot(Fm, ylim=c(0.90, 1.002), xlim=c(0, 50), lwd = 2)
+matplot(sort(fire[fire >= u]), sort(Fx.PG), type = "l", lwd = 2, add = T, col = "blue")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

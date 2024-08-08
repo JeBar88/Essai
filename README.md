@@ -5,7 +5,7 @@ Cet essai vise à comprendre et à quantifier le risque d'incendie, en se concen
 
 # Description des dossiers
 ## Data
-Ce doissier contient la base de données des périls d'incendie de la ville de Toronto. En raison de sa taille et des restrictions liées aux droits, la *National Fire Information Database* ne peut pas être incluse dans ce dépôt.
+Ce dossier contient la base de données des périls d'incendie de la ville de Toronto. En raison de sa taille et des restrictions liées aux droits, la National Fire Information Database ne peut pas être incluse dans ce dépôt. Les autres bases de données fournies sont des bases de données bien connues qui ont permis de confirmer les résultats.
 
 ## Articles
 Ce dossier regroupe l'ensemble des articles consultés au cours de ma maîtrise pour la rédaction de mon essai.

@@ -24,4 +24,4 @@ Ce dossier contient tous les codes relatifs à la modélisation du péril incend
 - `NFID.R` : contient le code pour la modélisation du péril incendie pour la NFID, qui représente une portion importante de l'essai.
 - `MixedErlang.R` : contient le code qui teste la loi de mélange d'Erlang pour la portion sous le seuil.
 
-Les autres fichiers sont similaires aux fichiers `Toronto.R` et `NFID.R`, mais utilisent d'autres bases de données.
+Les autres fichiers de ce dossier sont similaires aux fichiers `Toronto.R` et `NFID.R`, mais utilisent d'autres bases de données.

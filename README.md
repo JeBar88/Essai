@@ -1,4 +1,4 @@
-# Essai
+# Maîtrise
 Ce dépôt contient l'ensemble des documents et fichiers de code R utilisés au cours de ma maîtrise. Il regroupe les ressources nécessaires à la réalisation de mon essai, ainsi que divers éléments de travail et analyses associées. On y trouve les scripts, les bases de données, les rapports, et tout autre matériel pertinent pour comprendre et reproduire les travaux effectués durant cette période.
 
 # Résumé

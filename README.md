@@ -13,5 +13,10 @@ Ce dossier regroupe l'ensemble des articles consultés au cours de ma maîtrise 
 ## Code
 Ce dossier contient tout le code développé pour mon essai.
 
-### **POT_Exemple**
+### POT_Exemple
 Ce dossier contient le fichier RMarkdown illustrant la méthode *Peak-over-Threshold* (POT). Les bases de données nécessaires se trouvent dans le dossier Data.
+
+### Modelisation
+Ce dossier contient tous les codes relatifs à la modélisation du péril incendie pour différentes bases de données.
+- Fonction.R : ce fichier contient toutes les fonctions nécessaires pour la modélisation.
+- Documentation.R : ce fichier contient la documentation des fonctions qui ce trouve dans le fichier Fonction.R.

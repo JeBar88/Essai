@@ -15,15 +15,17 @@ Des éléments des rapport `Incendie_JBarde.pdf` et `LectureDirigee_JBarde.pdf` 
 
 ## Conférence
 Ce dossier contient les slides des différentes conférences réalisées.
-- `Incendie_JBarde_slides.pdf` : "Analyse actuarielle du péril incendie" présenté à
+- `Incendie_JBarde_slides.pdf` : "Analyse actuarielle du péril incendie"
   - Centre Interdisciplinaire de Modélisation Mathématique de l’Université Laval
 (CIMMUL)
   - Chaire Industrielles de Recherche sur la Construction Écoresponsable du Bois (CIRCERB)
   - Chaire de Recherche Co-operators en analyse des risques actuariels (CARA)
-- `LectureDirigee_JBarde_slides.pdf` : "Incendie et Pareto" présenté à
+- `IncendiePareto_JBarde_slides.pdf` : "Incendie et Pareto"
   -  Centre Interdisciplinaire de Modélisation Mathématique de l’Université Laval (CIMMUL)
-- `Essai_JBarde_slides.pdf` : "Actuarial Perspectives on Fire Losses, Particularly for Heavy Timber Construction" présenté à
+- `Essai_JBarde_slides.pdf` : "Actuarial Perspectives on Fire Losses, Particularly for Heavy Timber Construction"
   - Actuarial Research Conference (ARC 2024)
+- `LectureDirigee_JBarde_slides.pdf` : "Analyse et modélisation des pertes extrêmes : approches et applications"
+  - Dans le cadre du cours de lecture dirigée ACT-7014
   
  
 ## Code
